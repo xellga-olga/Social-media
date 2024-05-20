@@ -1,7 +1,10 @@
-import type { Metadata, Viewport } from "next";
+import type { Metadata } from "next";
+import { Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import LayoutClient from "@/components/layout/Layout";
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: '#000A1A',
+  themeColor: '#000',
   colorScheme: 'dark',
 }
 
@@ -21,6 +24,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body className={inter.className}>
